@@ -19,10 +19,11 @@ const emojis = [
 
 function App() {
  const greeting = "greeting"; 
+ const displayAction = false;
  return (
    <div className="container" >
     <h1 id={greeting}>Enjoy the bootcamp</h1>
-    <p>Lets explore JSX</p>
+   {displayAction && <p>Lets explore JSX</p>}
     <ul>
        {
           emojis.map(emoji => (
