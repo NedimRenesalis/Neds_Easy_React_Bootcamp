@@ -4,10 +4,12 @@ import './App.css';
 import animals from './data';
 import AnimalCard from '../AnimalCard/AnimalCard';
 
+import Alert from '../Alert/Alert';
+
 function App() {
   return (
-    <div className="wrapper">
-      {animals.map(animal =>
+    <div className="wrapper">      
+{animals.map(animal =>
         <AnimalCard
           diet={animal.diet}
           key={animal.name}
@@ -15,7 +17,9 @@ function App() {
           size={animal.size}
           scientificName={animal.scientificName}
         />
+      
       )}
+<Alert />
     </div>
   );
 }
